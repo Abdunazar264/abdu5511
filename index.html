@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abdu & Malika — Taklifnoma</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;background:#f8f4ee;color:#493b31}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;background:linear-gradient(#0003,#0005),url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85") center/cover}
+.card{max-width:620px;color:white}.small{letter-spacing:4px;font-size:13px}.names{font-size:56px;margin:18px 0;font-weight:normal}.date{font-size:22px}.btn{display:inline-block;margin-top:28px;padding:13px 25px;border:1px solid #fff;color:#fff;text-decoration:none;border-radius:30px}
+section{max-width:760px;margin:auto;padding:65px 22px;text-align:center}.orn{font-size:30px;color:#a88661}.title{font-size:32px;font-weight:normal;margin:10px 0 30px}
+.info{background:white;border-radius:22px;padding:28px;box-shadow:0 8px 30px #0000000d;margin:18px 0}
+.info h3{font-size:23px;font-weight:normal;margin:8px}.info p{line-height:1.7}
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;margin-top:20px}.calendar div{padding:10px 3px}.head{font-size:12px;color:#9b8061}.day{background:#f1e8dc;border-radius:8px}.today{background:#8d7053;color:white;border-radius:50%}
+.map{width:100%;height:260px;border:0;border-radius:18px}.music{position:fixed;right:18px;bottom:18px;width:50px;height:50px;border:0;border-radius:50%;background:#8d7053;color:white;font-size:20px;z-index:5}
+footer{padding:35px;text-align:center;background:#493b31;color:white}
+@media(max-width:600px){.names{font-size:43px}.title{font-size:28px}.hero{min-height:92vh}}
+</style>
+</head>
+<body>
+
+<button class="music" onclick="toggleMusic()">♪</button>
+<audio id="music" loop src="music.mp3"></audio>
+
+<div class="hero">
+  <div class="card">
+    <div class="small">NIKOH TO‘YI TAKLIFNOMASI</div>
+    <div class="names">Abdu & Malika</div>
+    <div class="date">12 • SENTYABR • 2026</div>
+    <a class="btn" href="#taklif">Taklifnomani ochish ↓</a>
+  </div>
+</div>
+
+<section id="taklif">
+  <div class="orn">❦</div>
+  <h1 class="title">Assalomu alaykum!</h1>
+  <p>Hayotimizdagi eng baxtli kunimizga Sizni aziz mehmonimiz sifatida taklif qilamiz.</p>
+
+  <div class="info">
+    <h3>💍 Nikoh to‘yi</h3>
+    <p><b>12 sentyabr 2026 yil</b><br>Soat 18:00</p>
+  </div>
+
+  <div class="info">
+    <h3>📅 Sentyabr 2026</h3>
+    <div class="calendar">
+      <div class="head">Du</div><div class="head">Se</div><div class="head">Ch</div><div class="head">Pa</div><div class="head">Ju</div><div class="head">Sh</div><div class="head">Ya</div>
+      <div></div><div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day">4</div><div class="day">5</div><div class="day">6</div>
+      <div class="day">7</div><div class="day">8</div><div class="day">9</div><div class="day">10</div><div class="day">11</div><div class="day today">12</div><div class="day">13</div>
+      <div class="day">14</div><div class="day">15</div><div class="day">16</div><div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div>
+      <div class="day">21</div><div class="day">22</div><div class="day">23</div><div class="day">24</div><div class="day">25</div><div class="day">26</div><div class="day">27</div>
+      <div class="day">28</div><div class="day">29</div><div class="day">30</div>
+    </div>
+  </div>
+
+  <div class="info">
+    <h3>📍 To‘y manzili</h3>
+    <p><b>“Samarqand” tantanalar saroyi</b><br>Toshkent shahri, Yunusobod tumani</p>
+    <a class="btn" style="background:#8d7053;border:0" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Tashkent">Google Maps’da ochish</a>
+  </div>
+
+  <div class="info">
+    <h3>💌 Sizni kutamiz!</h3>
+    <p>Quvonchli kunimizda Siz bilan birga bo‘lish biz uchun katta baxt.</p>
+  </div>
+</section>
+
+<footer>Abdu & Malika • 2026</footer>
+
+<script>
+let playing=false;
+function toggleMusic(){
+ const a=document.getElementById('music');
+ if(playing){a.pause(); playing=false}
+ else{a.play().then(()=>playing=true).catch(()=>alert("Avval sahifaga bir marta teging, keyin musiqa tugmasini bosing."))}
+}
+</script>
+</body>
+</html>
